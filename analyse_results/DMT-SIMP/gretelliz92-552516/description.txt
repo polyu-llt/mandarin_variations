@@ -1,0 +1,12 @@
+This paper describes the system we developed for DMT in VarDial 2019: Discriminating between Mainland and Taiwan variation of Mandarin Chinese.
+
+The task aims at discriminating between two major varieties of Mandarin Chinese: Putonghua (Mainland China) and Guoyu (Taiwan).
+Two versions must be analyzed, the traditional and the simplified. 
+
+----------------- System Description
+
+A very simple preprocessing is carried out to preserve all the characteristics that can be discriminative between the two types of texts that are analyzed. Therefore, in this step we only represent the texts with fasttext word embedding for Chinese. We also use a linguistic feature based on tf-idf.
+
+The vectors obtained in the preprocessing are used as input of the model we propose. This model consists of a BiLSTM layer  whose output is the input of  fully connected neural network of 4 dense layers with the relu activation function, and one output layer with the softmax.
+
+We used just the provide data from this competition.

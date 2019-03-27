@@ -1,0 +1,5 @@
+These results were produced by using a custom coded language identifier using product of relative frequencies of character n-grams. Basically it is a naive Bayes classifier using the relative frequencies as probabilities. The lengths of the character n-grams used were from 1 to 15. Instead of multiplying the relative frequencies we summed up their negative logarithms. As a smoothing value we used the negative logarithm of an n-gram appearing only once multiplied by a penalty modifier. In this case, the penalty modifier was 1.3. This is the same implementation which we used as the best CLI baseline (https://arxiv.org/abs/1903.01891).
+
+In addition, we used the same language model adaptation technique as we used with the HeLI method in GDI 2018 (Jauhiainen-Jauhiainen-Lindén 2018: HeLI-based Experiments in Swiss German Dialect Identification), but added also a separate confidence threshold. We added the information from the line only if the confidence of the identification was higher than 0.45.
+
+As training data for this run, we used the combination of the train.txt and the dev.txt files provided.

@@ -1,0 +1,5 @@
+These results were produced by using a custom coded language identifier using product of relative frequencies of character n-grams. Basically it is a naive Bayes classifier using the relative frequencies as probabilities. The lengths of the character n-grams used were from 1 to 14. Instead of multiplying the relative frequencies we summed up their negative logarithms. As a smoothing value we used the negative logarithm of an n-gram appearing only once multiplied by a penalty modifier. In this case, the penalty modifier was 1.3. This is the same implementation which we used as the best CLI baseline (https://arxiv.org/abs/1903.01891).
+
+The n-gram models used, penalty modifier, and the number of splits in adaptation was optimized using the development data.
+
+As training data for this run, we used the combination of the train.txt and the dev.txt files provided.

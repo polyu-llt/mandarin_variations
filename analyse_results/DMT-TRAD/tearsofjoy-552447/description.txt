@@ -1,0 +1,12 @@
+This submission is based on a linear SVM classifier (one-vs-rest
+multi-class classifier) with character n-gram of order 1 to 4 combined
+with word unigrams(effect of word n-grams on the development set is
+small). All ngram features are combined into a single feature matrix,
+and weighted by BM25. The model is tuned for optimum 'C' parameter
+(5.8 for this submission) and maximum n-gram order on the
+training/development set. There were no preprocessing steps, and no
+special methods or resources were employed. However, data was
+"augmented" by adding the test instances that are classified with a
+classifier trained on the training set with high cofidence to the
+training set, and re-training the classfier with the addtional
+'silver' data from the test set.
