@@ -1,3 +1,0 @@
-We use a multinomial Naive Bayes model to generate this submission.
-
-The multinomial Naive Bayes model is trained using presence vs. absence (0 vs. 1) vectors based on combinations of character level bigrams and trigrams, from DMT training data of traditional version. The macro-weighted f1 score of this model on validation set is 0.9225.

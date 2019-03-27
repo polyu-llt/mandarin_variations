@@ -1,9 +1,0 @@
-We use multinomial Naive Bayes and BiLSTM ensemble model to generate this submission.
-
-For multinomial Naive Bayes, it is trained using presence vs. absence (0 vs. 1) vectors based on feature combinations of character level bigrams and trigrams as input.
-
-For BiLSTM, We first use Word2vec method trained on DMT dataset to obtain word embedding matrix, then we can use a word embedding sequence as input sentence representation. A forward and a backwrad LSTM is used to process the sequence and produce hidden states, which contain information from context in two opposite information. After obtaining hidden state sequence, max-over-time pooling operation is applied to form a fix-size vector as sentence representaion, which will be feed into a hidden dense layer with 256 units and a final dense layer to predict.
-
-These two models are both trained on DMT dataset of traditional version. After training these base classifier, we then take an average of output probabilities from all the models and use it to make the final prediction.
-
-The macro-weighted f1 score of this ensemble model on validation set is 0.9130.

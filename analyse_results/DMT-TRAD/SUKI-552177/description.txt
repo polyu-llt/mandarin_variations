@@ -1,7 +1,0 @@
-These results were produced by using the HeLI with language model adaptation technique, similar to the one we used with the HeLI method in GDI 2018 (Jauhiainen-Jauhiainen-Lindén 2018: HeLI-based Experiments in Swiss German Dialect Identification), but we added also a separate confidence threshold. We added the information from the line only if the confidence of the identification was higher than 0.42. We used whole words and character n-grams from 1 to 2.
-
-As a smoothing value in case a feature was not found in a language, we used the negative logarithm of an n-gram appearing only once multiplied by a penalty modifier. In this case, the penalty modifier was 1.12. This is the same implementation which we used as the best CLI baseline (https://arxiv.org/abs/1903.01891).
-
-The n-gram models used, penalty modifier, and the confidence value used in adaptation were optimized using the development data.
-
-As training data for this run, we used the combination of the train.txt and the dev.txt files provided.

@@ -1,1 +1,0 @@
-The file "dmtTrad.labels" is the final file. First of all , we built a  dictionary which contain the 5000 high frequency words  and assign value to these words. Second we use CNN methord  to train and test, and then we get the CNN model . In the end we conbine this two methords,so the results is better then one of the aboved single two methords
